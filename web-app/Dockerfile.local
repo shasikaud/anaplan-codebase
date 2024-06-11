@@ -1,0 +1,10 @@
+FROM node:20.11.1
+
+RUN mkdir -p /app/web-app
+WORKDIR /app/web-app
+COPY web-app/package*.json .
+RUN npm ci --verbose
+COPY web-app/ .
+RUN npx prisma generate
+
+CMD ["npm", "run", "dev", "--verbose"]
