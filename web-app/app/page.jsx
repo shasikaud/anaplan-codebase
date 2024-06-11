@@ -25,7 +25,7 @@ export default function Home() {
         <p className="text-4xl mb-2">Dashboards</p>
         {loading && <p>Loading...</p>}
         {!!dashboards?.length && dashboards.map((dashboard) => (
-          <p key={dashboard.id}>{dashboard.id}. {dashboard.title}</p>
+          <p key={dashboard.id}>{dashboard.id}. {dashboard.title} {dashboard.createdAt}</p>
         ))}
       </div>
     </main>
