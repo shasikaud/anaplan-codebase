@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from "react";
-import getDashboards from "@/app/apis/dashboards/getDashboards";
+import getDashboards from "@/app/requests/dashboards/getDashboards";
 
 export default function Home() {
 

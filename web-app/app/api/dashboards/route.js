@@ -7,6 +7,6 @@ export const GET = async (req) => {
         return NextResponse.json(data);
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ error }, { status: 500 });
+        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 };
